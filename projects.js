@@ -2,11 +2,14 @@ console.log('Projects JS Loaded'); // Check if JS file is loaded
 
 const projects = [
   {
-    title: 'BRCA Therapeutic Target Ranking',
+    title: 'Pan-Cancer Biomarker Discovery',
     description:
-      'A pipeline integrating RNA-seq and proteomics for biomarker discovery using TCGA BRCA data.',
+      'Reproducible DESeq2-based pipeline inspired by TNMplot to identify biomarkers across breast, lung, and colon cancer using TCGA data.',
     image: 'project1.jpg', // Use a placeholder or themed image
-    link: '', // optional
+    link: 'https://github.com/tera90223/Cancer-Biomarker-Discovery-Reproducible-Study-Based-on-TNMplot', // GitHub or detailed blog page
+    tags: ['RNA-seq', 'Proteomics', 'TCGA', 'ML'],
+    status: 'Completed',
+    date: 'December 2024',
   },
   {
     title: 'Coming Soon',
@@ -40,9 +43,28 @@ function loadProjects() {
       'hover:scale-105'
     );
     projectCard.innerHTML = `
-      <h3 class="text-xl font-semibold">${project.title}</h3>
-      <p class="text-gray-600 mt-2">${project.description}</p>
-      <a href="${project.link}" class="mt-4 text-blue-500 hover:underline">Learn more</a>
+      <div class="flex flex-col h-full">
+        <img src="${project.image}" alt="${
+      project.title
+    }" class="w-full h-40 object-cover rounded-md mb-4" />
+        <h3 class="text-xl font-bold text-blue-500">${project.title}</h3>
+        <p class="text-blue-500 mt-2 flex-grow">${project.description}</p>
+
+        ${
+          project.tags
+            ? `<div class="mt-2 flex flex-wrap gap-2">${project.tags
+                .map(
+                  (tag) =>
+                    `<span class="text-xs bg-blue-800 text-white px-2 py-1 rounded-full">${tag}</span>`
+                )
+                .join('')}</div>`
+            : ''
+        }
+
+        <a href="${
+          project.link
+        }" target="_blank" class="mt-4 inline-block text-blue-400 hover:underline">Learn more</a>
+      </div>
     `;
 
     // Append the project card to the grid
