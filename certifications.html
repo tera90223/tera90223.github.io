@@ -3,301 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume</title>
+    <title>Certifications & Learning Progress</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <style>
+      body {
+        background-color: #0a192f;
+        color: #f8f8f2;
+      }
+    </style>
   </head>
-
-  <body>
+  <body class="min-h-screen p-8">
+    <!-- Injected Header -->
     <div id="header-placeholder"></div>
 
-    <!-- Resume -->
-    <section class="max-w-4xl mx-auto mt-10 px-4">
-      <!-- Name & Contact -->
-      <div class="text-center mb-6">
-        <h1 class="text-3xl md:text-4xl font-bold">Chantera Lazard</h1>
+    <h1 class="text-4xl font-bold mb-10 text-center">
+      Certifications & Learning Journey
+    </h1>
 
-        <p class="text-sm md:text-base text-gray-600">
-          <a
-            href="mailto:lazard.c@northeastern.edu"
-            class="underline hover:text-blue-600"
-            >lazard.c@northeastern.edu</a
-          >
-          |
-          <a href="tel:8328458161" class="underline hover:text-blue-600"
-            >832-845-8161</a
-          >
-          |
-          <a
-            href="https://www.linkedin.com/in/chantera-lazard-66836652"
-            target="_blank"
-            class="underline hover:text-blue-600"
-          >
-            LinkedIn
-          </a>
-        </p>
-      </div>
-
-      <!-- Education -->
-      <div class="mb-8">
-        <h2 class="text-xl font-semibold border-b pb-1 mb-4">Education</h2>
-
-        <div class="mb-4">
-          <p class="font-medium">
-            Northeastern University, College of Science – Boston, MA
-          </p>
-          <p class="text-sm italic text-gray-700">
-            Master of Science in Bioinformatics – July 2026
-          </p>
-          <p class="text-sm text-gray-500">GPA: 4.00</p>
-        </div>
-
-        <div>
-          <p class="font-medium">
-            University of Houston, Cullen College of Engineering – Houston, TX
-          </p>
-          <p class="text-sm italic text-gray-700">
-            Bachelor of Science in Biotechnology, Concentration in
-            Bioinformatics – Dec. 2020
-          </p>
-          <p class="text-sm text-gray-500">GPA: 3.43</p>
-        </div>
-      </div>
-
-      <!-- Experience -->
-      <div class="mb-8">
-        <h2 class="text-xl font-semibold border-b pb-1 mb-4">
-          Relevant Experience
-        </h2>
-
-        <div class="mb-6">
-          <div class="flex justify-between">
-            <p class="font-medium">Moments with Us, LLC – Sacramento, CA</p>
-            <p class="text-sm text-gray-500 italic">Nov. 2022 – Nov. 2024</p>
-          </div>
-          <p class="italic text-sm">Founder & Owner</p>
-          <ul
-            class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1"
-          >
-            <li>
-              Founded and managed a childcare business, growing clientele
-              through strategic marketing and referrals.
-            </li>
-            <li>
-              Coordinated healthcare appointments and liaised with medical
-              professionals to support client needs.
-            </li>
-            <li>
-              Trained and mentored 10 staff members, ensuring high-quality care
-              and operational efficiency.
-            </li>
-          </ul>
-        </div>
-
-        <div class="mb-6">
-          <div class="flex justify-between">
-            <p class="font-medium">Humana Military – Louisville, KY (WAH)</p>
-            <p class="text-sm text-gray-500 italic">Feb. 2022 – Oct. 2022</p>
-          </div>
-          <p class="italic text-sm">Benefits Service Representative</p>
-          <ul
-            class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1"
-          >
-            <li>
-              Analyzed healthcare inquiries, extracting key data points to
-              provide accurate and timely resolutions.
-            </li>
-            <li>
-              Ensured compliance with HIPAA and DHA regulations while processing
-              sensitive health information.
-            </li>
-            <li>
-              Investigated beneficiary case trends to identify patterns to
-              optimize healthcare operations.
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="flex justify-between">
-            <p class="font-medium">ScribeAmerica – Houston, TX (WAH)</p>
-            <p class="text-sm text-gray-500 italic">Apr. 2019 – Feb. 2022</p>
-          </div>
-          <p class="italic text-sm">Medical Scribe Lead</p>
-          <ul
-            class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1"
-          >
-            <li>
-              Documented patient encounters in real-time, ensuring accuracy and
-              completeness in medical records.
-            </li>
-            <li>
-              Supported physicians across 5 locations, adapting to diverse
-              documentation styles and workflows.
-            </li>
-            <li>
-              Promoted to Lead Scribe, training new hires, streamlining
-              documentation, and improving efficiency.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Academic Projects -->
-      <div class="mb-8">
-        <h2 class="text-xl font-semibold border-b pb-1 mb-4">
-          Academic Research Projects
-        </h2>
-
-        <!-- Project 1 -->
-        <div class="mb-6">
-          <p class="font-medium">
-            Northeastern University – Gene Expression Analysis and Visualization
-            Pipeline
-          </p>
-          <p class="text-sm italic text-gray-500">Sep. 2024 – Dec. 2024</p>
-          <ul
-            class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1"
-          >
-            <li>
-              Analyzed transcriptome datasets to identify top regulated genes
-              across three cancer cohorts.
-            </li>
-            <li>
-              Reproduced a differential expression pipeline inspired by
-              TNMplot.com.
-            </li>
-            <li>
-              Used Mann-Whitney U tests and created box plots, volcano plots,
-              and violin plots for visualization.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="mb-6">
-          <p class="font-medium">
-            Independent Research – RNA-seq Analysis Pipeline
-          </p>
-          <p class="text-sm italic text-gray-500">Aug. 2024 – Dec. 2024</p>
-          <ul
-            class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1"
-          >
-            <li>
-              Built a custom Python pipeline for biomarker detection in liver
-              cancer using GEO data.
-            </li>
-            <li>
-              Automated RNA-seq steps: QC (FastQC), alignment (HISAT2), and
-              quantification (featureCounts).
-            </li>
-            <li>
-              Implemented normalization with DESeq2 and enhanced reproducibility
-              via scripting.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="mb-6">
-          <p class="font-medium">
-            Biomarker Ranker and Therapy Prediction ML Pipeline
-          </p>
-          <p class="text-sm italic text-gray-500">Mar. 2025 – Present</p>
-          <ul
-            class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1"
-          >
-            <li>
-              Designing ML pipeline to rank biomarkers using TCGA RNA-seq +
-              proteomics data.
-            </li>
-            <li>
-              Using Random Forests, SVM, GBM with scikit-learn, integrating
-              clinical metadata.
-            </li>
-            <li>
-              Deploying with AWS EC2/S3; plan to validate predictions via
-              DrugBank and CTD.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="mb-6">
-          <p class="font-medium">
-            University of Houston – Small Business Database Developer
-          </p>
-          <p class="text-sm italic text-gray-500">Jan. 2020 – Dec. 2020</p>
-          <ul
-            class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1"
-          >
-            <li>
-              Built Java/SQL database system for small business data management
-              and analysis.
-            </li>
-            <li>
-              Designed data models using ER diagrams, aligned workflows with
-              system requirements.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Project 5 -->
-        <div>
-          <p class="font-medium">
-            Capstone Research – Glyphosate Biodegradation via NGS
-          </p>
-          <p class="text-sm italic text-gray-500">Jan. 2020 – May 2020</p>
-          <ul
-            class="list-disc list-inside text-sm mt-2 text-gray-700 space-y-1"
-          >
-            <li>
-              Identified glyphosate degradation pathways using NGS and
-              metagenomics pipelines.
-            </li>
-            <li>
-              Analyzed bacterial community composition and functional capacity.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Skills -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Not Started Column -->
       <div>
-        <h2 class="text-xl font-semibold border-b pb-1 mb-4">Skills</h2>
-        <ul class="text-sm text-gray-700 space-y-2">
-          <li>
-            Programming: Python (pandas, numpy, scikit-learn, matplotlib), R
-          </li>
-          <li>Bioinformatics: RNA-seq, proteomics, NGS, DESeq2, edgeR</li>
-          <li>Cloud: AWS (EC2, S3, Lambda), Docker</li>
-          <li>Version Control: Git, GitHub</li>
-        </ul>
-      </div>
-
-      <!-- Floating Download Button -->
-      <div id="downloadBtn" class="fixed bottom-6 right-6 group z-50">
-        <a
-          href="/Chantera_Lazard_Resume.pdf"
-          download
-          class="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-          ><i class="fa fa-download" style="font-size: 36px"></i>
-        </a>
-        <!-- Tooltip -->
-        <div
-          class="absolute right-14 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition bg-gray-800 text-white text-xs rounded px-2 py-1 pointer-events-none"
-        >
-          Download Resume
+        <h2 class="text-lg font-semibold mb-4 text-gray-400">Not Started</h2>
+        <div class="space-y-4">
+          <div class="bg-gray-800 p-4 rounded shadow">
+            <h3 class="font-semibold">Stanford : CS229 - Machine Learning</h3>
+            <p class="text-sm text-gray-300">
+              Andrew Ng highly regarded introductory course that covers
+              supervised and unsupervised learning techniques.
+            </p>
+            <span
+              class="inline-block mt-2 text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded"
+              >Not Started</span
+            >
+          </div>
+          <div class="bg-gray-800 p-4 rounded shadow">
+            <h3 class="font-semibold">Rice: Algorithmic Thinking</h3>
+            <p class="text-sm text-gray-300">
+              A course to refine logic and computational skills after Stanford
+              CS229.
+            </p>
+            <span
+              class="inline-block mt-2 text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded"
+              >Not Started</span
+            >
+          </div>
         </div>
       </div>
-    </section>
 
+      <!-- Planned Column -->
+      <div>
+        <h2 class="text-lg font-semibold mb-4 text-purple-400">Planned</h2>
+        <div class="space-y-4">
+          <div class="bg-gray-800 p-4 rounded shadow">
+            <h3 class="font-semibold">Imperial: Mathematics for ML</h3>
+            <p class="text-sm text-gray-300">
+              Laying the foundation before Stanford’s CS229.
+            </p>
+            <span
+              class="inline-block mt-2 text-xs text-purple-400 bg-purple-800 px-2 py-1 rounded"
+              >Planned</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- In Progress Column -->
+      <div>
+        <h2 class="text-lg font-semibold mb-4 text-yellow-400">In Progress</h2>
+        <div class="space-y-4">
+          <div class="bg-gray-800 p-4 rounded shadow">
+            <h3 class="font-semibold">
+              MIT 6.0002 – Computational Thinking and Data Science
+            </h3>
+            <p class="text-sm text-gray-300">
+              Algorithmic problem-solving using Python. Focus on optimization,
+              dynamic programming, and simulation.
+            </p>
+            <span
+              class="inline-block mt-2 text-xs text-yellow-600 bg-yellow-300 px-2 py-1 rounded"
+              >In Progress</span
+            >
+            <button
+              onclick="toggleDetails('mit-details')"
+              class="text-yellow-400 text-sm hover:underline"
+            >
+              View Details
+            </button>
+
+            <!-- Expandable details -->
+            <div id="mit-details" class="mt-4 hidden">
+              <p class="text-sm font-medium text-gray-300">
+                Goal: Finish by July 31, 2025
+              </p>
+
+              <!-- Progress bar -->
+              <div class="w-full bg-gray-200 h-4 rounded mt-2">
+                <div class="bg-yellow-400 h-4 rounded" style="width: 47%"></div>
+              </div>
+              <p class="text-sm text-gray-300 mt-1">47% complete</p>
+
+              <!-- Checklist -->
+              <ul class="mt-3 text-sm list-disc list-inside text-gray-300">
+                <li>Lectures: 7 of 15</li>
+                <li>Problem Sets: 2 of 5</li>
+                <li>Challenge Project: 0 of 1</li>
+              </ul>
+            </div>
+          </div>
+          <script>
+            function toggleDetails(id) {
+              const el = document.getElementById(id);
+              el.classList.toggle('hidden');
+            }
+          </script>
+        </div>
+      </div>
+
+      <!-- Completed Column -->
+      <div>
+        <h2 class="text-lg font-semibold mb-4 text-green-400">Completed</h2>
+        <div class="space-y-4">
+          <!-- Leave empty for now -->
+          <p class="text-gray-500 italic">
+            No completions yet—check back soon!
+          </p>
+        </div>
+      </div>
+    </div>
     <div id="footer-placeholder"></div>
 
     <script>
@@ -305,34 +140,14 @@
         .then((res) => res.text())
         .then((data) => {
           document.getElementById('header-placeholder').innerHTML = data;
-        })
-        .catch((err) => console.error('Header failed to load:', err));
-
+        });
+    </script>
+    <script>
       fetch('footer.html')
         .then((res) => res.text())
         .then((data) => {
           document.getElementById('footer-placeholder').innerHTML = data;
-
-          const downloadBtn = document.getElementById('downloadBtn');
-          const footer = document.querySelector('footer');
-
-          function handleScroll() {
-            const footerTop = footer.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-
-            if (footerTop < windowHeight + 20) {
-              downloadBtn.style.position = 'absolute';
-              downloadBtn.style.bottom =
-                'calc(100% - ' + footerTop + 'px + 40px)';
-            } else {
-              downloadBtn.style.position = 'fixed';
-              downloadBtn.style.bottom = '24px'; // Reset back to original
-            }
-          }
-
-          window.addEventListener('scroll', handleScroll);
-        })
-        .catch((err) => console.error('Footer failed to load:', err));
+        });
     </script>
   </body>
 </html>
