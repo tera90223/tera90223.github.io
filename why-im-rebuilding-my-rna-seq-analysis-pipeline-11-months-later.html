@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>A Beginner’s RNA-seq Journey, Revisited</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #F8F4EF;
+        color: #1A1A1A;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen px-6 py-10 font-sans">
+    <!-- Header -->
+    <header class="mb-10">
+      <a href="/blog/index.html" class="text-[#0a192f] hover:underline">&larr; Back to Blog Home</a>
+    </header>
+
+    <!-- Blog Content -->
+    <article class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-[#0a192f] mb-4">
+        From Pipelines to Precision: A Beginner’s RNA-seq Journey, Revisited
+      </h1>
+
+      <p class="text-sm text-gray-400 mb-6">
+        Posted July 7, 2025 • 3 min read
+      </p>
+
+      <!-- Section: Intro -->
+      <section class="my-12">
+        <p class="mb-4">
+          Eleven months ago, I dove into RNA-seq analysis for the first time, uncertain but determined to rewrite my science career. After years of orbiting the medical field, I realized what I truly loved was the complexity of disease, not treating it, but decoding it. This project began as a Youtube tutorial by Bioinformagician and quickly became a springboard into deeper work. Now, I’m revisiting it with sharper tools, a structured plan, and clearer goals.
+        </p>  
+        
+        <!-- Visual Reflection -->
+        <div class="my-10 text-center">
+          <img
+            src="../assets/rna-reprogramming-illustration.png"
+            alt="Illustration of a Black woman immersed in data and science, symbolizing transformation in RNA-seq analysis"
+            class="mx-auto rounded shadow-lg w-full max-w-2xl"
+          />
+          <p class="mt-4 text-sm italic text-gray-400">
+            “I wasn’t just analyzing RNA—I was reprogramming how I saw science.”
+          </p>
+        </div>
+      </section>
+    
+      <hr class="my-8 border-t border-[#e6e1d7]">
+
+      <!-- Section: Why am I building Project-->
+      <section class="my-12">
+        <h2 class="text-2xl text-[#0a192f] font-semibold mt-6 mb-2">🔁 Why Am I Revisiting This Now:</h2>
+        <p class="mb-4">
+          Since my first pipeline, I have completed one year of formal coursework from my Master’s program, gained hands-on project experience, and started thinking critically about quality control, reproducibility, and how to compare different RNA-seq analysis strategies.
+        </p>
+
+        <p class="mb-4">
+          My only pipeline was not a failure, but a foundation. I now understand that bioinformatics is not just about running code. It is about making informed decisions at each step and knowing how these choices affect interpretation.
+        </p>
+
+        <h3 class="text-1xl text-[#0a192f] font-semibold mb-2">Why Rebuild the RNA-seq Pipeline?</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>
+            <strong>RNA-seq results do not start at the analysis step.</strong> Every quality control and preprocessing effort can alter biological conclusions.
+          </li>
+          <li>
+            <strong>The same dataset can lead to very different biological conclusions,</strong> depending on the normalization strategy, statistical test, or clustering method used.
+          </li>
+          <li>
+            <strong>I realized I did not fully understand the “why” behind the steps before.</strong> Now, I want to challenge and compare them not just technically, but biologically.
+          </li>
+        </ul>
+      </section>
+
+      <hr class="my-8 border-t border-[#e6e1d7]">
+
+      <!-- Section: Project Plan -->
+      <section class="my-12">
+        <h2 class="text-2xl text-[#0a192f] font-semibold mt-6 mb-2">📋 The Plan:</h2>
+        
+        <h3 class="text-1xl text-[#0a192f] font-semibold mb-2">The Guiding Question</h3>
+
+        <blockquote class="italic border-l-4 border-[#0a192f] pl-4 text-gray-800 mb-6">
+          What are the major differences between various RNA-seq analysis methods and how do their assumptions and outcomes shape our biological interpretation?
+        </blockquote>
+
+        <ul class="list-disc list-inside mb-4">
+          <li>🏗️ <strong>Phase 1:</strong> Rebuild the RNA-seq pipeline
+            <ul class="list-disc list-inside ml-6 mt-2">
+              <li><strong>Goal: </strong>Establish a clean, reproducible, modular pipeline for RNA-seq analysis using best practices.</li>
+              <li><strong>Why it Matters: </strong>Without quality preprocessing, downstream results are unreliable and misleading.</li>
+            </ul>
+          </li>  
+          <li>🔍 <strong>Phase 2:</strong> Explore multiple analysis workflows
+            <ul class="list-disc list-inside ml-6 mt-2">
+              <li><strong>Goal: </strong>Compare different analysis strategies on the same dataset.</li>
+              <li><strong>Why it Matters: </strong>Choosing the right method is not just a technical decision. It is also a scientific one. Method selection can determine which genes you report, how you group them, and which hypotheses you pursue.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <!--Phase II Analysis Table-->
+        <div class="overflow-x-auto my-10">
+          <table class="min-w-full divide-y divide-gray-600 text-sm text-gray-200">
+            <thead class="bg-[#112240] text-left text-[#64FFDA]">
+              <tr>
+                <th class="px-4 py-3">Method</th>
+                <th class="px-4 py-3">What It Does</th>
+                <th class="px-4 py-3">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="bg-[#0a192f] divide-y divide-gray-800">
+              <tr>
+                <td class="px-4 py-3 font-medium">DESeq2</td>
+                <td class="px-4 py-3">Differential Expression</td>
+                <td class="px-4 py-3">Industry standard; great for small samples, strong stats</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">GO Analysis</td>
+                <td class="px-4 py-3">Gene ontology enrichment</td>
+                <td class="px-4 py-3">Translates gene lists into biological meaning</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">K-Means Clustering</td>
+                <td class="px-4 py-3">Groups genes based on expression patterns</td>
+                <td class="px-4 py-3">Simple unsupervised approach, reveals expression modules</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">Hierarchical Clustering</td>
+                <td class="px-4 py-3">Build tree-like clusters</td>
+                <td class="px-4 py-3">Better visualization, less arbitrary than k-means</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">Random Forest</td>
+                <td class="px-4 py-3">Supervised ML model for classification</td>
+                <td class="px-4 py-3">Can rank features, useful for prediction and insight</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">Variance Analysis</td>
+                <td class="px-4 py-3">Measure gene expression variability</td>
+                <td class="px-4 py-3">Helps detect subtle changes or instability across groups</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p class="mb-4">
+          I chose a mix of classical and ML-based methods, some inspired by literature, others by curiosity.
+        </p>
+
+        <h3 class="text-1xl text-[#0a192f] font-semibold mb-2">WorkFlow Diagram</h3>
+
+        <!--WorkFlow Diagram Visual-->
+        <figure class="my-6">
+          <img
+            src="../assets/workflow_diagram.png"
+            alt="RNA-seq analysis workflow diagram illustrating the key stages of quality control, preprocessing, normalization, and analysis."
+          />
+          <figcaption class="mt-2 text-center text-sm text-gray-400 italic">
+            RNA-seq analysis workflow: from raw FASTQ files to biological insights.
+          </figcaption>
+        </figure>
+      </section>
+
+      <hr class="my-8 border-t border-[#e6e1d7]">
+
+      <!-- Section: Project Aim -->
+      <section class="my-12">
+        <h2 class="text-2xl text-[#0a192f] font-semibold mt-6 mb-2">🧪 What This Project Aims to Answer:</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Which methods give similar vs different results?</li>
+          <li>Do supervised models like Random Forest agree with traditional statistical models like DESeq2?</li>
+          <li>How do clustering methods affect biological interpretation?</li>
+          <li>How sensitive are results to preprocessing steps?</li>
+        </ul>
+      </section>
+
+      <hr class="my-8 border-t border-[#e6e1d7]">
+
+      <!-- Section: Final Thoughts -->
+      <section class="my-12">
+        <h2 class="text-2xl text-[#0a192f] font-semibold mt-6 mb-2">💭 Final Thoughts</h2>
+
+        <p class="mb-4">
+          I am not just building a better pipeline, I am building confidence in my own scientific reasoning.
+        </p>
+
+        <p class="mb-4">
+          This process is not perfect, but science rarely is. I have learned a lot, but I am also still learning. If you are curious how different RNA-seq strategies influence biological interpretation, follow along. This is not just about code. It’s about insight.
+
+        </p>
+      </section>
+
+    </article>
+    <hr class="my-10 border-gray-300" />
+    <div class="text-sm text-center text-gray-600">
+      <p>📚 This post is part of the series:
+        <a href="./series/from-pipelines-to-precision.html" class="text-purple-700 hover:underline font-medium">
+          From Pipelines to Precision
+        </a>
+      </p>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('../footer.html')
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
